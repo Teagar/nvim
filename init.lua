@@ -1,17 +1,13 @@
-require "configs.personalConfig"
-require "mappings"
-require "functions"
-require "highlights"
+require "config.lazy"
+require "config.settings"
+require "config.mappings"
+require "config.functions"
+require "config.highlights"
+require "plugins.plugins"
 
-local opt = vim.opt
-local g = vim.g
-local icons = require "icons"
-
-opt.scrolloff = 8
-opt.cmdheight = 2
-opt.guicursor = ''
-opt.fillchars = { eob = icons.ui.BoldLineLeft }
-
-opt.backup = false
-opt.writebackup = false
+require("autoclose").setup()
+require("mason").setup()
+require("nvim-tree").setup(require("plugins.config.nvim-tree"))
+require("lualine").setup()require("plugins.config.lualine")
+--require("ufo").setup(require("plugins.config.ufo"))
 

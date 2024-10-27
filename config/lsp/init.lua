@@ -5,7 +5,7 @@ end
 
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = { "sumneko_lua "}
+  ensure_installed = { "lua_ls"}
 })
 
-require("lspconfig").sumneko_lua.setup {}
+require("lspconfig").lua_ls.setup {}

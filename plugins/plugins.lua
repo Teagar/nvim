@@ -1,10 +1,18 @@
 return {
   {"m4xshen/autoclose.nvim"},
+
   {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
   },
+
+  {"hrsh7th/nvim-cmp"},
+  {"hrsh7th/cmp-nvim-lsp"},
+  {"saadparwaiz1/cmp_luasnip"},
+  {"L3MON4D3/LuaSnip"},
+  { "rafamadriz/friendly-snippets" },
+
   {"nvim-tree/nvim-tree.lua"},
   {"kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async"},
   {'jose-elias-alvarez/null-ls.nvim', requires = 'nvim-lua/plenary.nvim'},

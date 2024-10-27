@@ -13,6 +13,9 @@ return {
   {"L3MON4D3/LuaSnip"},
   { "rafamadriz/friendly-snippets" },
 
+  { 'nvim-telescope/telescope.nvim', dependencies = { "nvim-lua/plenary.nvim"} },
+  { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+
   {"nvim-tree/nvim-tree.lua"},
   {"kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async"},
   {'jose-elias-alvarez/null-ls.nvim', requires = 'nvim-lua/plenary.nvim'},

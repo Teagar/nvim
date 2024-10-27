@@ -4,6 +4,7 @@ require "config.mappings"
 require "config.functions"
 require "config.highlights"
 require "plugins.plugins"
+require "config.lsp.init"
 
 require("autoclose").setup()
 require("mason").setup()

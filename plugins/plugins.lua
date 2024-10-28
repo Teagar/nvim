@@ -17,7 +17,7 @@ return {
   { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
 
   {"nvim-tree/nvim-tree.lua"},
-  {"kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async"},
+  {"kevinhwang91/nvim-ufo", dependencies = { "kevinhwang91/promise-async" } },
   {'jose-elias-alvarez/null-ls.nvim', requires = 'nvim-lua/plenary.nvim'},
   {'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' }},
   {"nvim-treesitter/nvim-treesitter",

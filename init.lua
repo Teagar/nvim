@@ -28,3 +28,5 @@ require("ufo").setup(require("plugins.config.ufo"))
 require("ibl").setup()
 require("rainbow-delimiters.setup").setup()
 require("plugins.config.ibl")
+
+require("noice").setup(require("plugins.config.noice"))

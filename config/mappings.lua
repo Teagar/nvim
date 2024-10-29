@@ -15,4 +15,4 @@ keymap('n', '<leader>n', ':NvimTreeToggle<CR>', { noremap = true, silent = true 
 keymap('n', 'y', '"+y', { noremap = true, silent = true })
 keymap('n', 'p', '"+p', { noremap = true, silent = true })
 
-
+keymap('n', '<leader>d', '<cmd>NoiceDismiss<CR>', { desc = "Dismiss Noice Message"})

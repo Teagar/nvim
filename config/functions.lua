@@ -67,3 +67,5 @@ keymap('n', '<leader>n', '', {
 
 -- Desabilitando Ctrl+w para mudar para a janela de notificações
 keymap('n', '<C-w>w', '', { noremap = true, silent = true })
+
+

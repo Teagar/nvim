@@ -27,3 +27,5 @@ require("rainbow-delimiters.setup").setup()
 require("plugins.config.ibl")
 
 require("noice").setup(require("plugins.config.noice"))
+
+

@@ -1,15 +1,9 @@
-local keymap = vim.api.nvim_set_keymap
+-- Adding an empty line below, above and below with insert
+keymap('n', 'op', 'o<Esc>k', 	{ noremap = true, silent = true, desc = "Add an empty line below" })
+keymap('n', 'oi', 'O<Esc>j', 	{ noremap = true, silent = true, desc = "Add an empty line above" })
+keymap('n', 'oo', 'A<CR>', 	{ noremap = true, silent = true, desc = "Insert above" })
 
-vim.cmd([[
-
-" Adding an empty line below, above and below with insert
-nmap op o<Esc>k
-nmap oi O<Esc>j
-nmap oo A<CR>
-
-]])
-
-keymap('n', '<leader>n', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
+keymap('n', '<leader>e', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
 
 -- Mapeamento para copiar para a área de transferência
 keymap('n', 'y', '"+y', { noremap = true, silent = true })

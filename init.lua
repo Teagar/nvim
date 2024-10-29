@@ -1,5 +1,4 @@
-local g = vim.g
-local lpath = vim.fn.stdpath "config" .. "/lua/my-snippets"
+require "globals"
 
 g.vscode_snippets_path = lpath
 g.snipmate_snippets_path = lpath
@@ -20,8 +19,6 @@ require("lualine").setup()
 require("cmp").setup(require("plugins.config.cmp"))
 require("telescope").setup(require("plugins.config.telescope"))
 
--- To get fzf loaded and working with telescope, you need to call
--- load_extension, somewhere after setup function:
 require('telescope').load_extension('fzf')
 
 require("ufo").setup(require("plugins.config.ufo"))

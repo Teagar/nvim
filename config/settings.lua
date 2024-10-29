@@ -1,7 +1,3 @@
-local opt = vim.opt
-local g = vim.g
-local icons = require("icons")
-
 opt.scrolloff = 8
 opt.cmdheight = 2
 opt.guicursor = ''

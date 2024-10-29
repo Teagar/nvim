@@ -1,5 +1,3 @@
-wo.number = true
-
 -- Grupo de autocommand para alternar numeração relativa e destacar o buffer atual
 local numbertoggle = augroup("numbertoggle", { clear = true })
 local highlight_current_buffer = augroup("highlight_current_buffer", { clear = true })

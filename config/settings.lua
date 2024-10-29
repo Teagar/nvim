@@ -15,6 +15,8 @@ opt.foldlevel = 99
 opt.foldlevelstart = 99
 opt.foldenable = true
 
+wo.number = true
+
 opt.shiftwidth = 2
 
 opt.backup = false

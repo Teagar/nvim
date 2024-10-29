@@ -1,18 +1,25 @@
 local opt = vim.opt
 local g = vim.g
+local icons = require("icons")
 
 opt.scrolloff = 8
 opt.cmdheight = 2
 opt.guicursor = ''
-opt.fillchars = { eob = " " }
+opt.fillchars = {
+  eob = ' ',
+  fold = ' ',
+  foldopen = icons.ui.ChevronShortDown,
+  foldsep = icons.ui.BoldLineLeft,
+  foldclose = icons.ui.ChevronShortRight
+}
 opt.cursorline = true
 
-opt.foldcolumn = "1"
+opt.foldcolumn = "0"
 opt.foldlevel = 99
 opt.foldlevelstart = 99
 opt.foldenable = true
 
-opt.shiftwidth = 2       
+opt.shiftwidth = 2
 
 opt.backup = false
 opt.clipboard = 'unnamedplus'

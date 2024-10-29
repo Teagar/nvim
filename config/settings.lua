@@ -7,6 +7,11 @@ opt.guicursor = ''
 opt.fillchars = { eob = " " }
 opt.cursorline = true
 
+opt.foldcolumn = "1"
+opt.foldlevel = 99
+opt.foldlevelstart = 99
+opt.foldenable = true
+
 opt.shiftwidth = 2       
 
 opt.backup = false

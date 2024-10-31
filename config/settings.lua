@@ -1,3 +1,4 @@
+opt.wrap = false
 opt.scrolloff = 8
 opt.cmdheight = 2
 opt.guicursor = ''

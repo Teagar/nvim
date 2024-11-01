@@ -54,7 +54,7 @@ local function go_to_notify()
       vim.api.nvim_set_current_win(notify_win_id)
     end
   else
-    print("Notificação não encontrada!")
+    print("Notification not found!")
   end
 end
 

@@ -14,6 +14,6 @@ keymap('n', 'p', '"+p', { noremap = true, silent = true })
 keymap('n', '<leader>d', '<cmd>NoiceDismiss<CR>', { desc = "Dismiss Noice Message" })
 
 -- Buffer Control
-keymap('n', '<leader>bn', ':bnext<CR>', { noremap = true, silent = true, desc = 'Go to next buffer'})
-keymap('n', '<leader>bp', ':bprevious<CR>', { noremap = true, silent = true, desc = 'Go to previous buffer'})
-keymap('n', '<leader>bd', ':bdelete<CR>', { noremap = true, silent = true, desc = 'Delete the current buffer'})
+keymap('n', 'tn', ':bnext<CR>', { noremap = true, silent = true, desc = 'Go to next buffer'})
+keymap('n', 'tp', ':bprevious<CR>', { noremap = true, silent = true, desc = 'Go to previous buffer'})
+keymap('n', 'td', ':bdelete<CR>', { noremap = true, silent = true, desc = 'Delete the current buffer'})

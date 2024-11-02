@@ -27,6 +27,8 @@ opt.writebackup = false
 -- disable netrw at the very start of your init.lua
 g.loaded_netrw = 1
 g.loaded_netrwPlugin = 1
+g.loaded_perl_provider = 0
+g.loaded_ruby_provider = 0
 
 -- optionally enable 24-bit colour
 opt.termguicolors = true

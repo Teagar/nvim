@@ -18,6 +18,7 @@ return {
   { "nvim-tree/nvim-tree.lua" },
   { "nvim-telescope/telescope.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
   { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+  { "akinsho/bufferline.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
 
   -- UI and Enhancements
   { "kevinhwang91/nvim-ufo", dependencies = { "kevinhwang91/promise-async" } },

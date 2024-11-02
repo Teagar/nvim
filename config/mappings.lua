@@ -13,14 +13,7 @@ keymap('n', 'p', '"+p', { noremap = true, silent = true })
 -- Dismiss Noice messages
 keymap('n', '<leader>d', '<cmd>NoiceDismiss<CR>', { desc = "Dismiss Noice Message" })
 
-local ls = require("luasnip")
-
-vim.keymap.set({"i"}, "<C-K>", function() ls.expand() end, {silent = true})
-vim.keymap.set({"i", "s"}, "<C-L>", function() ls.jump( 1) end, {silent = true})
-vim.keymap.set({"i", "s"}, "<C-J>", function() ls.jump(-1) end, {silent = true})
-
-vim.keymap.set({"i", "s"}, "<C-E>", function()
-	if ls.choice_active() then
-		ls.change_choice(1)
-	end
-end, {silent = true})
+-- Buffer Control
+keymap('n', '<leader>bn', ':bnext<CR>', { noremap = true, silent = true, desc = 'Go to next buffer'})
+keymap('n', '<leader>bp', ':bprevious<CR>', { noremap = true, silent = true, desc = 'Go to previous buffer'})
+keymap('n', '<leader>bd', ':bdelete<CR>', { noremap = true, silent = true, desc = 'Delete the current buffer'})

@@ -1,33 +1,30 @@
 local transparency = true
 
-if (transparency == true) then
-	hl(0, 'Normal', { bg = 'NONE', ctermbg = 'NONE' })
+if transparency then
+  hl(0, "Normal", { bg = "NONE", ctermbg = "NONE" })
 end
 
-local highlight = {
-    "RainbowRed",
-    "RainbowYellow",
-    "RainbowBlue",
-    "RainbowOrange",
-    "RainbowGreen",
-    "RainbowViolet",
-    "RainbowCyan",
+local highlight_groups = {
+  RainbowRed = "#E06C75",
+  RainbowYellow = "#E5C07B",
+  RainbowBlue = "#61AFEF",
+  RainbowOrange = "#D19A66",
+  RainbowGreen = "#98C379",
+  RainbowViolet = "#C678DD",
+  RainbowCyan = "#56B6C2",
 }
+
 local hooks = require "ibl.hooks"
--- create the highlight groups in the highlight setup hook, so they are reset
--- every time the colorscheme changes
+
+-- Create highlight groups and set up scope highlighting
 hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
-    hl(0, "RainbowRed", { fg = "#E06C75" })
-    hl(0, "RainbowYellow", { fg = "#E5C07B" })
-    hl(0, "RainbowBlue", { fg = "#61AFEF" })
-    hl(0, "RainbowOrange", { fg = "#D19A66" })
-    hl(0, "RainbowGreen", { fg = "#98C379" })
-    hl(0, "RainbowViolet", { fg = "#C678DD" })
-    hl(0, "RainbowCyan", { fg = "#56B6C2" })
+  for name, color in pairs(highlight_groups) do
+    hl(0, name, { fg = color })
+  end
 end)
 
-vim.g.rainbow_delimiters = { highlight = highlight }
-require("ibl").setup { scope = { highlight = highlight } }
+g.rainbow_delimiters = { highlight = vim.tbl_keys(highlight_groups) }
+require("ibl").setup { scope = { highlight = vim.tbl_keys(highlight_groups) } }
 
 hooks.register(hooks.type.SCOPE_HIGHLIGHT, hooks.builtin.scope_highlight_from_extmark)
 

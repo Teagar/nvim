@@ -32,4 +32,3 @@ require "lualine".setup()
 require "cmp".setup(require("plugins.config.cmp"))
 require "telescope".setup(require("plugins.config.telescope"))
 require('telescope').load_extension('fzf')
-

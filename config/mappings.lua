@@ -17,3 +17,5 @@ keymap('n', '<leader>d', '<cmd>NoiceDismiss<CR>', { desc = "Dismiss Noice Messag
 keymap('n', 'tn', ':bnext<CR>', { noremap = true, silent = true, desc = 'Go to next buffer'})
 keymap('n', 'tp', ':bprevious<CR>', { noremap = true, silent = true, desc = 'Go to previous buffer'})
 keymap('n', 'td', ':bdelete<CR>', { noremap = true, silent = true, desc = 'Delete the current buffer'})
+keymap('n', 'tad', ':bufdo bd<CR>', { noremap = true, silent = true, desc = 'Delete all buffers'})
+keymap('n', '<leader>b', ':Telescope buffers<CR>', { noremap = true, silent = true, desc = 'Show all buffers'})

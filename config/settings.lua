@@ -30,3 +30,5 @@ g.loaded_netrwPlugin = 1
 
 -- optionally enable 24-bit colour
 opt.termguicolors = true
+
+vim.loader.enable()

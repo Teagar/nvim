@@ -3,6 +3,8 @@ require "globals"
 g.vscode_snippets_path = lpath
 g.snipmate_snippets_path = lpath
 
+vim.loader.enable() 
+
 -- Core plugins and configurations
 require "config.lazy"
 require "config.settings"

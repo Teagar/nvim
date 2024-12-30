@@ -14,7 +14,6 @@ require "config.highlights"
 require "plugins.plugins"
 require "config.lsp.init"
 require "plugins.config.lualine"
-require "plugins.config.ibl"
 
 -- LSP setup (if applicable)
 -- ... (your LSP setup code here)

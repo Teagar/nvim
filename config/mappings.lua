@@ -19,3 +19,6 @@ keymap('n', 'tp', ':bprevious<CR>', { noremap = true, silent = true, desc = 'Go 
 keymap('n', 'td', ':bdelete<CR>', { noremap = true, silent = true, desc = 'Delete the current buffer'})
 keymap('n', 'tad', ':bufdo bd<CR>', { noremap = true, silent = true, desc = 'Delete all buffers'})
 keymap('n', '<leader>b', ':Telescope buffers<CR>', { noremap = true, silent = true, desc = 'Show all buffers'})
+
+-- Toggle Colorizer
+keymap('n', '<leader>c', ':ColorizerToggle<CR>', { noremap = true, silent = true, desc = 'Toggle Colorizer'})

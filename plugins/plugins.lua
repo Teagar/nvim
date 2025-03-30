@@ -28,6 +28,7 @@ return {
   { "nvim-lualine/lualine.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
   { "folke/noice.nvim", dependencies = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify" } },
   { "norcalli/nvim-colorizer.lua" },
+  { "lewis6991/gitsigns.nvim" },
 
   -- Language Server Support
   { "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" },

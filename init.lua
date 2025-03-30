@@ -3,7 +3,7 @@ require "globals"
 g.vscode_snippets_path = lpath
 g.snipmate_snippets_path = lpath
 
-vim.loader.enable() 
+vim.loader.enable()
 
 -- Core plugins and configurations
 require "config.lazy"
@@ -26,6 +26,7 @@ require "ibl".setup()
 require "rainbow-delimiters.setup".setup()
 require "plugins.config.ibl"
 require "noice".setup(require("plugins.config.noice"))
+require('gitsigns').setup(require("plugins.config.gitsigns"))
 
 -- UI and navigation
 require "nvim-tree".setup(require("plugins.config.nvim-tree"))

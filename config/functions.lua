@@ -2,12 +2,12 @@
 local numbertoggle = augroup("numbertoggle", { clear = true })
 local highlight_current_buffer = augroup("highlight_current_buffer", { clear = true })
 
--- Função para alternar numeração relativa
+-- Function to alternate relative number
 local function toggle_relative_number(enable)
   wo.relativenumber = enable and wo.number and vim.fn.mode() ~= "i"
 end
 
--- Autocommands para alternar numeração relativa
+-- Autocommands to change relative number
 autocmd({"BufEnter", "FocusGained", "InsertLeave", "WinEnter"}, {
   group = numbertoggle,
   callback = function() toggle_relative_number(true) end,
@@ -18,7 +18,8 @@ autocmd({"BufLeave", "FocusLost", "InsertEnter", "WinLeave"}, {
   callback = function() toggle_relative_number(false) end,
 })
 
--- Autocommands para cursorline
+-- Autocommands to cursorline
+--[[ 
 autocmd({"WinEnter"}, {
   group = highlight_current_buffer,
   callback = function() wo.cursorline = true end,
@@ -28,13 +29,13 @@ autocmd({"WinLeave"}, {
   group = highlight_current_buffer,
   callback = function() wo.cursorline = false end,
 })
+]]--
 
-
--- Função para mover o cursor para a janela de notificações do notify
+-- Function to move the cursor to notify's notification window 
 local function go_to_notify()
   local notify_win_id = nil
 
-  -- Encontra a janela de notificações do notify
+  -- Find the notify's notification window
   for _, win in ipairs(vim.api.nvim_list_wins()) do
     local buf = vim.api.nvim_win_get_buf(win)
     if vim.api.nvim_buf_get_option(buf, 'filetype') == 'notify' then
@@ -43,7 +44,7 @@ local function go_to_notify()
     end
   end
 
-  -- Se a janela de notificações estiver aberta
+  -- If the notification window is open
   if notify_win_id then
     -- Verifica se o foco já está na janela de notificações
     if vim.api.nvim_get_current_win() == notify_win_id then
@@ -58,14 +59,42 @@ local function go_to_notify()
   end
 end
 
--- Mapeamento para <leader>n
+-- Map to <leader>n
 keymap('n', '<leader>n', '', {
   noremap = true,
   silent = true,
   callback = go_to_notify,
 })
 
--- Desabilitando Ctrl+w para mudar para a janela de notificações
+-- Desctivate Ctrl+w to change to the notify`s window (to do)
+local function skip_notify()
+  local notify_win_id = nil
+
+  -- Find the notify's notification window
+  for _, win in ipairs(vim.api.nvim_list_wins()) do
+    local buf = vim.api.nvim_win_get_buf(win)
+    if vim.api.nvim_buf_get_option(buf, 'filetype') == 'notify' then
+      notify_win_id = win
+      break
+    end
+  end
+
+  -- If the notification window is open
+  if notify_win_id then
+    -- Verifica se o foco já está na janela de notificações
+    if vim.api.nvim_get_current_win() == notify_win_id then
+      -- Make a function to skip the notify windows
+    else
+      -- Caso contrário, muda para a janela de notificações
+      vim.api.nvim_set_current_win(notify_win_id)
+    end
+  else
+    print("Notification not found!")
+  end
+end
+
+-- Highlight Current Line Number (to do)
+	
 --keymap('n', '<C-w>w', '', { noremap = true, silent = true })
 
 

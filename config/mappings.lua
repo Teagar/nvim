@@ -22,3 +22,9 @@ keymap('n', '<leader>b', ':Telescope buffers<CR>', { noremap = true, silent = tr
 
 -- Toggle Colorizer
 keymap('n', '<leader>c', ':ColorizerToggle<CR>', { noremap = true, silent = true, desc = 'Toggle Colorizer'})
+
+-- Toggle Gitsigns
+keymap('n', '<leader>g', '', { noremap = true, silent = true, desc = 'Gitsigns'})
+keymap('n', '<leader>gl', ':Gitsigns toggle_linehl<CR>', { noremap = true, silent = true, desc = 'Toggle Gitsigns line highlight'})
+keymap('n', '<leader>gn', ':Gitsigns toggle_numhl<CR>', { noremap = true, silent = true, desc = 'Toggle Gitsigns number highlight'})
+keymap('n', '<leader>gs', ':Gitsigns toggle_signs<CR>', { noremap = true, silent = true, desc = 'Toggle Gitsigns highlight'})

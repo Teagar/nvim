@@ -19,7 +19,6 @@ autocmd({"BufLeave", "FocusLost", "InsertEnter", "WinLeave"}, {
 })
 
 -- Autocommands to cursorline
---[[ 
 autocmd({"WinEnter"}, {
   group = highlight_current_buffer,
   callback = function() wo.cursorline = true end,
@@ -29,7 +28,6 @@ autocmd({"WinLeave"}, {
   group = highlight_current_buffer,
   callback = function() wo.cursorline = false end,
 })
-]]--
 
 -- Function to move the cursor to notify's notification window 
 local function go_to_notify()

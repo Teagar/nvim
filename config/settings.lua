@@ -9,7 +9,7 @@ opt.fillchars = {
   foldsep = icons.ui.BoldLineLeft,
   foldclose = icons.ui.ChevronShortRight
 }
-opt.cursorline = false
+opt.cursorline = true
 
 opt.foldcolumn = "0"
 opt.foldlevel = 99

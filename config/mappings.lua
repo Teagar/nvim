@@ -1,14 +1,18 @@
+M.mappings = {}
+M.mappings.core = function ()
 -- Add empty lines and insert
 keymap('n', 'op', 'o<Esc>k', 	{ noremap = true, silent = true, desc = "Add an empty line below" })
 keymap('n', 'oi', 'O<Esc>j', 	{ noremap = true, silent = true, desc = "Add an empty line above" })
 keymap('n', 'oo', 'A<CR>', 	{ noremap = true, silent = true, desc = "Insert above" })
 
--- Toggle NvimTree
-keymap('n', '<leader>e', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
-
 -- Copy and paste to system clipboard
 keymap('n', 'y', '"+y', { noremap = true, silent = true })
 keymap('n', 'p', '"+p', { noremap = true, silent = true })
+end
+
+-- Toggle NvimTree
+keymap('n', '<leader>e', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
+
 
 -- Dismiss Noice messages
 keymap('n', '<leader>d', '<cmd>NoiceDismiss<CR>', { desc = "Dismiss Noice Message" })
@@ -28,3 +32,5 @@ keymap('n', '<leader>g', '', { noremap = true, silent = true, desc = 'Gitsigns'}
 keymap('n', '<leader>gl', ':Gitsigns toggle_linehl<CR>', { noremap = true, silent = true, desc = 'Toggle Gitsigns line highlight'})
 keymap('n', '<leader>gn', ':Gitsigns toggle_numhl<CR>', { noremap = true, silent = true, desc = 'Toggle Gitsigns number highlight'})
 keymap('n', '<leader>gs', ':Gitsigns toggle_signs<CR>', { noremap = true, silent = true, desc = 'Toggle Gitsigns highlight'})
+
+M.mappings.core()

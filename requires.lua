@@ -1,7 +1,5 @@
 -- Core plugins and configurations
-local utils = {}
-
-utils.setup_core = function()
+M.utils.setup_core = function()
     require("config.lazy")
     require("config.settings")
     require("config.mappings")
@@ -12,7 +10,7 @@ utils.setup_core = function()
     require("plugins.config.lualine")
 end
 
-utils.setup_plugins = function()
+M.utils.setup_plugins = function()
     require("autoclose").setup()
     require("mason").setup()
     require("ufo").setup(require("plugins.config.ufo"))
@@ -23,7 +21,7 @@ utils.setup_plugins = function()
     require("gitsigns").setup(require("plugins.config.gitsigns"))
 end
 
-utils.setup_ui = function()
+M.utils.setup_ui = function()
     require("nvim-tree").setup(require("plugins.config.nvim-tree"))
     require("lualine").setup()
     require("bufferline").setup(require("plugins.config.bufferline"))
@@ -36,6 +34,6 @@ utils.setup_ui = function()
 end
 
 -- Main setup
-utils.setup_core()
-utils.setup_plugins()
-utils.setup_ui()
+M.utils.setup_core()
+M.utils.setup_plugins()
+M.utils.setup_ui()

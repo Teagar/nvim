@@ -1,4 +1,3 @@
--- Core plugins and configurations
 M.utils.setup_core = function()
     require("config.lazy")
     require("config.settings")

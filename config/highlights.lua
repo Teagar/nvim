@@ -1,8 +1,4 @@
-local transparency = true
-
-if transparency then
-  hl(0, "Normal", { bg = "NONE", ctermbg = "NONE" })
-end
+local transparency = false
 
 local highlight_groups = {
   RainbowRed = "#E06C75",
@@ -29,3 +25,7 @@ require("ibl").setup { scope = { highlight = vim.tbl_keys(highlight_groups) } }
 hooks.register(hooks.type.SCOPE_HIGHLIGHT, hooks.builtin.scope_highlight_from_extmark)
 
 vim.cmd("colorscheme cyberdream")
+
+if transparency then
+  hl(0, "Normal", { bg = "NONE", ctermbg = "NONE" })
+end

@@ -29,6 +29,11 @@ return {
   { "folke/noice.nvim", dependencies = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify" } },
   { "norcalli/nvim-colorizer.lua" },
   { "lewis6991/gitsigns.nvim" },
+  {
+      "scottmckendry/cyberdream.nvim",
+      lazy = false,
+      priority = 1000,
+  },
 
   -- Language Server Support
   { "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" },

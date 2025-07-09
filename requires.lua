@@ -23,13 +23,13 @@ end
 M.utils.setup_ui = function()
     require("nvim-tree").setup(require("plugins.config.nvim-tree"))
     require("lualine").setup()
-    require("bufferline").setup(require("plugins.config.bufferline"))
     require("cmp").setup(require("plugins.config.cmp"))
     require("telescope").setup(require("plugins.config.telescope"))
     require("telescope").load_extension("fzf")
     require("telescope").load_extension("projects")
     require("project_nvim").setup()
     require("colorizer").setup()
+    require("cyberdream").setup()
 end
 
 -- Main setup

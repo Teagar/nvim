@@ -30,8 +30,15 @@ M.mappings.gitsigns = function ()
   keymap('n', '<leader>gs', ':Gitsigns toggle_signs<CR>', { noremap = true, silent = true, desc = 'Toggle Gitsigns highlight'})
 end
 
+M.mappings.telescope = function ()
+  keymap('n', '<leader>t', '', { desc = 'Telescope' })
+  keymap('n', '<leader>tf', ':Telescope find_files<CR>', { noremap = true, silent = true, desc = 'Telescope find files' })
+  keymap('n', '<leader>tg', ':Telescope live_grep<CR>', { noremap = true, silent = true, desc = 'Telescope live grep' })
+  keymap('n', '<leader>th', ':Telescope help_tags<CR>', { noremap = true, silent = true, desc = 'Telescope help tags' })
+end
 
 M.mappings.core()
 M.mappings.plugins()
 M.mappings.buffer_control()
 M.mappings.gitsigns()
+M.mappings.telescope()

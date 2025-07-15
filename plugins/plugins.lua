@@ -18,6 +18,11 @@ return {
   { "nvim-tree/nvim-tree.lua" },
   { "nvim-telescope/telescope.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
   { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+  {
+    "ibhagwan/fzf-lua",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    opts = {}
+  },
   { "akinsho/bufferline.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
   { "ahmedkhalf/project.nvim" },
 

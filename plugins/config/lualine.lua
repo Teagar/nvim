@@ -143,7 +143,7 @@ local lsp_info = {
     local buf_ft = vim.bo.filetype
     local clients = vim.lsp.get_active_clients()
     -- start register
-    local buf_clients = vim.lsp.buf_get_clients()
+    local buf_clients = vim.lsp.get_clients()
     local buf_client_names = {}
     if next(buf_clients) == nil then
       -- TODO: clean up this if statement

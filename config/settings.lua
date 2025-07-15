@@ -29,6 +29,12 @@ M.settings = function ()
   g.loaded_netrw = 1
   g.loaded_netrwPlugin = 1
 
+  -- diasble perl
+  g.loaded_perl_provider = 0
+
+  -- disable ruby
+  g.loaded_ruby_provider = 0
+
   -- optionally enable 24-bit colour
   opt.termguicolors = true
 

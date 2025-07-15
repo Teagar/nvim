@@ -12,14 +12,14 @@ require("mason-lspconfig").setup({
   automatic_instalation = true
 })
 
-require('mason-lspconfig').setup_handlers({
+--[[require('mason-lspconfig').setup_handlers({
   function(server_name)
     lspconfig[server_name].setup({
       capabilities = capabilities
     })
   end,
 })
-
+]]--
 lspconfig.phpactor.setup {
   cmd = {'~/.config/nvim/plugged/phpactor/bin/phpactor', 'language-server'}
 }

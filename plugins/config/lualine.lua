@@ -24,7 +24,6 @@ local diagnostics = {
   "diagnostics",
   sources = { "nvim_diagnostic" },
   sections = { "error", "warn" },
-  -- symbols = { error = " ", warn = " " },
   symbols = {
     error = icons.diagnostics.BoldError .. " ",
     warn = icons.diagnostics.BoldWarning .. " ",
@@ -37,19 +36,17 @@ local diagnostics = {
 local diff = {
   "diff",
   colored = true,
-  -- symbols = { added = " ", modified = " ", removed = " " }, -- changes diff symbols
   symbols = {
     added = icons.git.LineAdded .. " ",
     modified = icons.git.LineModified .. " ",
     removed = icons.git.LineRemoved .. " ",
-  }, -- changes diff symbols
+  },
   cond = hide_in_width,
 }
 
 local mode = {
   "mode",
   fmt = function(str)
-    -- return "-- " .. str .. " --"
     return str
   end,
 }
@@ -63,7 +60,6 @@ local filetype = {
 local branch = {
   "branch",
   icons_enabled = true,
-  --icon = "",
   icon = icons.git.Branch,
 }
 
@@ -87,7 +83,6 @@ local progress = function()
 end
 
 local spaces = function()
-  -- return "->| " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
   return icons.ui.Tab .. " " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
 end
 
@@ -137,9 +132,7 @@ end
 
 local lsp_info = {
   function()
-    --local msg = "No Active Lsp"
     local msg = "LS Inactive"
-    -- local buf_ft = vim.api.nvim_buf_get_option(0, "filetype")
     local buf_ft = vim.bo.filetype
     local clients = vim.lsp.get_active_clients()
     -- start register
@@ -169,7 +162,6 @@ local lsp_info = {
     local msg = table.concat(unique_client_names, ", ")
     return msg
   end,
-  --icon = " ",
   icon = icons.ui.Gear .. "",
 }
 
@@ -177,10 +169,8 @@ lualine.setup {
   options = {
     icons_enabled = true,
     theme = "horizon",
-    -- component_separators = { left = "", right = "" },
-    -- section_separators = { left = "", right = "" },
-    component_separators = { left = "", right = "" },
-    section_separators = { left = "", right = "" },
+    component_separators = { left = icons.ui.DividerRight, right = icons.ui.DividerLeft },
+    section_separators = { left = icons.ui.BoldDividerRight, right = icons.ui.BoldDividerLeft },
     disabled_filetypes = {
       "TelescopePrompt",
       "packer",
@@ -200,10 +190,8 @@ lualine.setup {
     lualine_a = { branch },
     lualine_b = { mode },
     lualine_c = { file_name, diagnostics, lsp_info },
-    -- lualine_c = { file_name, lsp_info },
-    -- lualine_x = { "encoding", "fileformat", "filetype" },
     lualine_x = { diff, spaces, "encoding", filetype },
-    lualine_y = { location },
+    lualine_y = { location, 'progress' },
     lualine_z = { time },
   },
   inactive_sections = {

@@ -1,4 +1,4 @@
--- Grupo de autocommand para alternar numeração relativa e destacar o buffer atual
+-- Autocomannd to alternate relative number and show actual buffer
 local numbertoggle = augroup("numbertoggle", { clear = true })
 local highlight_current_buffer = augroup("highlight_current_buffer", { clear = true })
 
@@ -44,12 +44,9 @@ local function go_to_notify()
 
   -- If the notification window is open
   if notify_win_id then
-    -- Verifica se o foco já está na janela de notificações
     if vim.api.nvim_get_current_win() == notify_win_id then
-      -- Se estiver, fecha a janela
       vim.api.nvim_win_close(notify_win_id, true)
     else
-      -- Caso contrário, muda para a janela de notificações
       vim.api.nvim_set_current_win(notify_win_id)
     end
   else
@@ -64,7 +61,7 @@ keymap('n', '<leader>n', '', {
   callback = go_to_notify,
 })
 
--- Desctivate Ctrl+w to change to the notify`s window (to do)
+--[[Desctivate Ctrl+w to change to the notify`s window (to do)
 local function skip_notify()
   local notify_win_id = nil
 
@@ -90,9 +87,9 @@ local function skip_notify()
     print("Notification not found!")
   end
 end
+]]--
 
 -- Highlight Current Line Number (to do)
 	
 --keymap('n', '<C-w>w', '', { noremap = true, silent = true })
-
 

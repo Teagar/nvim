@@ -31,6 +31,7 @@ M.utils.setup_ui = function()
     require("project_nvim").setup()
     require("colorizer").setup()
     require("cyberdream").setup()
+    require("nvim-treesitter").setup(require("plugins.config.treesitter"))
 end
 
 -- Main setup

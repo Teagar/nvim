@@ -23,7 +23,6 @@ return {
     dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = {}
   },
-  { "akinsho/bufferline.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
   { "ahmedkhalf/project.nvim" },
 
   -- UI and Enhancements

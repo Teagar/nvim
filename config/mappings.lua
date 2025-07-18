@@ -32,9 +32,10 @@ end
 
 M.mappings.telescope = function ()
   keymap('n', '<leader>t', '', { desc = 'Telescope' })
-  keymap('n', '<leader>tf', ':Telescope find_files<CR>', { noremap = true, silent = true, desc = 'Telescope find files' })
-  keymap('n', '<leader>tg', ':Telescope live_grep<CR>', { noremap = true, silent = true, desc = 'Telescope live grep' })
-  keymap('n', '<leader>th', ':Telescope help_tags<CR>', { noremap = true, silent = true, desc = 'Telescope help tags' })
+  keymap('n', '<leader>tf', ':Telescope find_files<CR>', { noremap = true, silent = true, desc = 'Find files' })
+  keymap('n', '<leader>tg', ':Telescope live_grep<CR>', { noremap = true, silent = true, desc = 'Live grep' })
+  keymap('n', '<leader>th', ':Telescope help_tags<CR>', { noremap = true, silent = true, desc = 'Help tags' })
+  keymap('n', '<leader>tp', ':Telescope projects<CR>', { noremap = true, silent = true, desc = 'Show all projects' })
 end
 
 M.mappings.core()

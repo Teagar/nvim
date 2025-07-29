@@ -18,6 +18,7 @@ M.utils.setup_plugins = function()
     require("plugins.config.ibl")
     require("noice").setup(require("plugins.config.noice"))
     require("gitsigns").setup(require("plugins.config.gitsigns"))
+    require("plugins.config.neogen")
 end
 
 M.utils.setup_ui = function()
@@ -31,7 +32,7 @@ M.utils.setup_ui = function()
     require("project_nvim").setup()
     require("colorizer").setup()
     require("cyberdream").setup()
-    require("nvim-treesitter").setup(require("plugins.config.treesitter"))
+    require("plugins.config.treesitter")
 end
 
 -- Main setup

@@ -69,7 +69,7 @@ local location = {
 }
 
 local time = function()
-  return " " .. os.date "%R"
+  return os.date "%R"
 end
 
 -- cool function for progress

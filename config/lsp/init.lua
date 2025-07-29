@@ -8,18 +8,26 @@ require("luasnip.loaders.from_vscode").lazy_load()
 require("luasnip.loaders.from_vscode").lazy_load({ paths = { lpath } })
 require("mason").setup()
 require("mason-lspconfig").setup({
-  --ensure_installed = { "lua_ls", "intelephense"},
   automatic_instalation = true
 })
 
---[[require('mason-lspconfig').setup_handlers({
-  function(server_name)
-    lspconfig[server_name].setup({
-      capabilities = capabilities
-    })
+-- PHP: intelephense
+lspconfig.intelephense.setup({
+  on_attach = function(client, bufnr)
   end,
 })
-]]--
-lspconfig.phpactor.setup {
-  cmd = {'~/.config/nvim/plugged/phpactor/bin/phpactor', 'language-server'}
-}
+
+-- HTML: vscode-html-language-server
+lspconfig.html.setup({
+  filetypes = { "html", "php" },
+  init_options = {
+    configurationSection = { "html", "css", "javascript" },
+    embeddedLanguages = {
+      css = true,
+      javascript = true
+    }
+  },
+  on_attach = function(client, bufnr)
+    client.server_capabilities.documentFormattingProvider = false
+  end
+})

@@ -13,16 +13,13 @@ return {
   { "saadparwaiz1/cmp_luasnip" },
   { "L3MON4D3/LuaSnip" },
   { "rafamadriz/friendly-snippets" },
+  { "danymat/neogen" },
 
   -- File Navigation and Search
   { "nvim-tree/nvim-tree.lua" },
   { "nvim-telescope/telescope.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
   { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
-  {
-    "ibhagwan/fzf-lua",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
-    opts = {}
-  },
+  { "ibhagwan/fzf-lua", dependencies = { "nvim-tree/nvim-web-devicons" } },
   { "ahmedkhalf/project.nvim" },
 
   -- UI and Enhancements
@@ -33,11 +30,7 @@ return {
   { "folke/noice.nvim", dependencies = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify" } },
   { "norcalli/nvim-colorizer.lua" },
   { "lewis6991/gitsigns.nvim" },
-  {
-      "scottmckendry/cyberdream.nvim",
-      lazy = false,
-      priority = 1000,
-  },
+  { "scottmckendry/cyberdream.nvim", lazy = false, priority = 1000 },
 
   -- Language Server Support
   { "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" },

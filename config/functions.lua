@@ -50,7 +50,7 @@ local function go_to_notify()
       vim.api.nvim_set_current_win(notify_win_id)
     end
   else
-    print("Notification not found!")
+    --print("Notification not found!")
   end
 end
 
@@ -59,6 +59,7 @@ keymap('n', '<leader>n', '', {
   noremap = true,
   silent = true,
   callback = go_to_notify,
+  desc = "Go to notify"
 })
 
 --[[Desctivate Ctrl+w to change to the notify`s window (to do)

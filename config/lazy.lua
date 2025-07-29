@@ -23,7 +23,7 @@ M.lazy = function ()
     spec = {
       { import = "plugins" },
     },
-    install = { colorscheme = { "habamax" } },
+    install = { colorscheme = { "cyberdream" } },
     checker = { enabled = false },
   })
 end

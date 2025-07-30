@@ -4,6 +4,7 @@ M.utils.setup_core = function()
     require('core.lsp')
     require('config.settings')
     require('config.mappings')
+    require('config.functions')
 end
 
 -- Main setup

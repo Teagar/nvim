@@ -12,7 +12,7 @@ return {
         -- "ghost", "simple", "nonerdfont", "amongus"
         preset = "classic",
 
-        transparent_bg = false,     -- Set the background of the diagnostic to transparent
+        transparent_bg = true,     -- Set the background of the diagnostic to transparent
         transparent_cursorline = false, -- Set the background of the cursorline to transparent (only one the first diagnostic)
 
         hi = {
@@ -140,7 +140,7 @@ return {
         },
         disabled_ft = {}                               -- List of filetypes to disable the plugin
       })
-      vim.diagnostic.config({ virtual_text = false })  -- Only if needed in your configuration, if you already have native LSP diagnostics
+      vim.diagnostic.config({ virtual_text = true })  -- Only if needed in your configuration, if you already have native LSP diagnostics
     end
   }
 }

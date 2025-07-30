@@ -53,6 +53,20 @@ M.settings = function ()
   g.loaded_ruby_provider = 0
 
   vim.loader.enable() -- Bytecode loader (fast)
+
+  vim.filetype.add({
+      extension = {
+	  env = "dotenv",
+      },
+      filename = {
+	  [".env"] = "dotenv",
+	  ["env"] = "dotenv",
+      },
+      pattern = {
+	  ["[jt]sconfig.*.json"] = "jsonc",
+	  ["%.env%.[%w_.-]+"] = "dotenv",
+      },
+  })
 end
 
 M.options()

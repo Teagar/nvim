@@ -14,6 +14,7 @@ return {
   { "L3MON4D3/LuaSnip" },
   { "rafamadriz/friendly-snippets" },
   { "danymat/neogen" },
+  { "folke/trouble.nvim" },
 
   -- File Navigation and Search
   { "nvim-tree/nvim-tree.lua" },

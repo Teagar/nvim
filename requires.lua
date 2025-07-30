@@ -19,6 +19,7 @@ M.utils.setup_plugins = function()
     require("noice").setup(require("plugins.config.noice"))
     require("gitsigns").setup(require("plugins.config.gitsigns"))
     require("plugins.config.neogen")
+    require("plugins.config.trouble")
 end
 
 M.utils.setup_ui = function()

@@ -38,8 +38,19 @@ M.mappings.telescope = function ()
   keymap('n', '<leader>tp', ':Telescope projects<CR>', { noremap = true, silent = true, desc = 'Show all projects' })
 end
 
+M.mappings.trouble = function ()
+  keymap('n', '<leader>d', '', { desc = 'Trouble' })
+  keymap('n', '<leader>dx', ':Trouble diagnostics toggle<CR>', { noremap = true, silent = true, desc = 'Diagnostics (Trouble)' })
+  keymap('n', '<leader>dX', ':Trouble diagnostics toggle filter.buf=0<CR>', { noremap = true, silent = true, desc = 'Buffer Diagnostics (Trouble)' })
+  keymap('n', '<leader>ds', ':Trouble symbols toggle focus=false<CR>', { noremap = true, silent = true, desc = 'Symbols (Trouble)' })
+  keymap('n', '<leader>dl', ':Trouble lsp toggle focus=false win.position=right<CR>', { noremap = true, silent = true, desc = 'LSP Definitions / references / ... (Trouble)' })
+  keymap('n', '<leader>dL', ':Trouble loclist toggle<CR>', { noremap = true, silent = true, desc = 'Location List (Trouble)' })
+  keymap('n', '<leader>dQ', ':Trouble qflist toggle<CR>', { noremap = true, silent = true, desc = 'Quickfix List (Trouble)' })
+end
+
 M.mappings.core()
 M.mappings.plugins()
 M.mappings.buffer_control()
 M.mappings.gitsigns()
 M.mappings.telescope()
+M.mappings.trouble()

@@ -1,4 +1,6 @@
 M.options = function ()
+  g.mapleader = ' '
+  g.maplocalleader = ' '
   opt.wrap = false
   opt.scrolloff = 8
   opt.cmdheight = 1

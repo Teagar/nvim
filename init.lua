@@ -1,3 +1,3 @@
-require("globals")
-require("core.lazy")
-require("requires")
+require('globals')
+require('core.lazy')
+require('requires')

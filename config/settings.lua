@@ -12,10 +12,10 @@ M.options = function ()
   }
 
   opt.cursorline = true
-  opt.mouse = "a"
+  opt.mouse = 'a'
 
-  opt.completeopt = { "menu", "menuone", "noselect" }
-  opt.foldcolumn = "0"
+  opt.completeopt = { 'menu', 'menuone', 'noselect' }
+  opt.foldcolumn = '0'
   opt.foldlevel = 99
   opt.foldlevelstart = 99
   opt.foldenable = true
@@ -34,7 +34,7 @@ M.options = function ()
   -- optionally enable 24-bit colour
   opt.termguicolors = true
 
-  opt.fileencoding = "utf-8"
+  opt.fileencoding = 'utf-8'
   opt.title = true
 end
 

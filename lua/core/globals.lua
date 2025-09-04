@@ -1,7 +1,6 @@
--- Vim API access
 M = {}
 M.utils = {}
-M.icons = require("icons")
+M.icons = {}
 
 M.utils.globals = function()
   vim = vim
@@ -12,7 +11,6 @@ M.utils.globals = function()
   keymap = vim.api.nvim_set_keymap
   g = vim.g
   hl = vim.api.nvim_set_hl
-  lpath = vim.fn.stdpath("config") .. "/lua/my-snippets"
   icons = M.icons
 end
 

@@ -1,8 +1,11 @@
 M = {}
-M.utils = {}
-M.icons = require("./core/icons")
+M.core = {}
+M.config = {}
+M.plugin = {}
 
-M.utils.globals = function()
+M.core.icons = require("./core/icons")
+
+M.core.globals = function()
   vim = vim
   opt = vim.opt
   wo = vim.wo
@@ -11,7 +14,7 @@ M.utils.globals = function()
   keymap = vim.api.nvim_set_keymap
   g = vim.g
   hl = vim.api.nvim_set_hl
-  icons = M.icons
+  icons = M.core.icons
 end
 
-M.utils.globals()
+M.core.globals()

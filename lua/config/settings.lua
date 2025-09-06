@@ -1,4 +1,4 @@
-M.options = function ()
+M.config.settings = function ()
   opt.wrap = false		-- Break the line, if true, just in view mode
   opt.scrolloff = 8		-- Minimal number of screen lines to keep above and below the cursor
   opt.guicursor = ""		-- Desactivate the changes of the cursor
@@ -29,9 +29,6 @@ M.options = function ()
 
   opt.title = true
 
-end
-
-M.settings = function ()
   wo.number = true 		-- Set numbers line
 
   g.loaded_perl_provider = 0	-- Disable perl
@@ -40,5 +37,4 @@ M.settings = function ()
   vim.loader.enable() 		-- Adds the Lua loader using the byte-compilation cache 
 end
 
-M.options()
-M.settings()
+M.config.settings()

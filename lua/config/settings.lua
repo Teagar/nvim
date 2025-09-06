@@ -31,9 +31,7 @@ M.options = function ()
 
 end
 
-
 M.settings = function ()
-
   wo.number = true 		-- Set numbers line
 
   g.loaded_perl_provider = 0	-- Disable perl

@@ -1,8 +1,3 @@
-M = {}
-M.core = {}
-M.config = {}
-M.plugin = {}
-
 M.core.icons = require("./core/icons")
 
 M.core.globals = function()

@@ -4,6 +4,8 @@ M.config.mappings.core = function ()
   -- Copy and paste to system clipboard
   keymap('n', 'y', '"+y', { noremap = true, silent = true })
   keymap('n', 'p', '"+p', { noremap = true, silent = true })
+
+  keymap('n', '<leader>e', ':Explore<CR>', { noremap = true, silent = true, desc = "Open netrw explorer" })
 end
 
 M.config.mappings.insert = function ()

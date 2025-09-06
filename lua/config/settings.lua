@@ -1,4 +1,5 @@
 M.config.settings = function ()
+  g.mapleader = ' '
   opt.wrap = false		-- Break the line, if true, just in view mode
   opt.scrolloff = 8		-- Minimal number of screen lines to keep above and below the cursor
   opt.guicursor = ""		-- Desactivate the changes of the cursor

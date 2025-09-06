@@ -1,1 +1,2 @@
-require("globals")
+require("core.globals")
+require("core.requires")

@@ -1,58 +1,45 @@
 M.options = function ()
-  opt.wrap = false
-  opt.scrolloff = 8
-  opt.cmdheight = 1
-  opt.guicursor = ''
+  opt.wrap = false		-- Break the line, if true, just in view mode
+  opt.scrolloff = 8		-- Minimal number of screen lines to keep above and below the cursor
+  opt.guicursor = ""		-- Desactivate the changes of the cursor
   opt.fillchars = {
-    eob = ' ',
-    fold = ' ',
+    eob = " ",			-- Empty lines at the end of a buffer
+    fold = " ",
     foldopen = icons.ui.ChevronShortDown,
     foldsep = icons.ui.BoldLineLeft,
     foldclose = icons.ui.ChevronShortRight
   }
 
   opt.cursorline = true
-  opt.mouse = "a"
+  opt.cursorlineopt = "number"	-- Set the type of cursor line (number|line|both)
 
   opt.completeopt = { "menu", "menuone", "noselect" }
-  opt.foldcolumn = "0"
+
   opt.foldlevel = 99
   opt.foldlevelstart = 99
-  opt.foldenable = true
-  opt.updatetime = 100
+  opt.updatetime = 100		-- Update time in ms(miliseconds)
 
-  opt.shiftwidth = 2
+  opt.shiftwidth = 2		-- Number of spaces in a tab
+  opt.smartindent = true	-- Do smart autoindenting when starting a new line
 
-  opt.smartindent = true
   opt.splitbelow = true
   opt.splitright = true
 
-  opt.backup = false
-  opt.clipboard = 'unnamedplus'
-  opt.writebackup = false
+  opt.clipboard = "unnamedplus" -- Use the clipboard register "+" (quoteplus) 
 
-  -- optionally enable 24-bit colour
-  opt.termguicolors = true
-
-  opt.fileencoding = "utf-8"
   opt.title = true
+
 end
+
 
 M.settings = function ()
 
-  wo.number = true
+  wo.number = true 		-- Set numbers line
 
-  -- disable netrw at the very start of your init.lua
-  g.loaded_netrw = 1
-  g.loaded_netrwPlugin = 1
+  g.loaded_perl_provider = 0	-- Disable perl
+  g.loaded_ruby_provider = 0	-- Disable ruby
 
-  -- diasble perl
-  g.loaded_perl_provider = 0
-
-  -- disable ruby
-  g.loaded_ruby_provider = 0
-
-  vim.loader.enable()
+  vim.loader.enable() 		-- Adds the Lua loader using the byte-compilation cache 
 end
 
 M.options()

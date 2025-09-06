@@ -11,7 +11,7 @@ M.config.highlights = {
     RainbowCyan = "#56B6C2",
   },
 
-  --vim.cmd("colorscheme cyberdream")
+
   diagnostic = function ()
     vim.diagnostic.config({
       signs = {
@@ -27,6 +27,7 @@ M.config.highlights = {
 }
 
 if M.config.highlights.transparency then
+vim.cmd("colorscheme retrobox")
   hl(0, "Normal", { bg = "NONE", ctermbg = "NONE" })
 end
 

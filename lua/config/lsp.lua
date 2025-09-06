@@ -17,7 +17,6 @@ M.config.lsp = {
 
 }
 
-
 M.config.lsp.front_end()
 M.config.lsp.back_end()
 M.config.lsp.misc()

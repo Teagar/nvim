@@ -18,6 +18,7 @@ M.config.settings = function ()
 
   opt.foldlevel = 99
   opt.foldlevelstart = 99
+  opt.foldmethod = "expr"
   opt.updatetime = 100		-- Update time in ms(miliseconds)
 
   opt.shiftwidth = 2		-- Number of spaces in a tab

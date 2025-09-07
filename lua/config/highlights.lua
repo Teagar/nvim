@@ -27,8 +27,9 @@ M.config.highlights = {
 }
 
 if M.config.highlights.transparency then
-vim.cmd("colorscheme retrobox")
+  vim.cmd("colorscheme retrobox")
   hl(0, "Normal", { bg = "NONE", ctermbg = "NONE" })
+  --vim.hl(0, "Normal", { bg = "NONE", ctermbg = "NONE" })
 end
 
 M.config.highlights.diagnostic()

@@ -18,6 +18,7 @@ return {
 			Identifier = { fg = white },
 			Delimiter = { fg = orange },
 			CursorLineNr = { fg = orange },
+			WinSeparator = { fg = gray },
 			["@punctuation.delimiter"] = { fg = white },
 	},
 

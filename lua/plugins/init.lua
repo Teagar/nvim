@@ -7,7 +7,7 @@ return {
 
 	-- UI
 	{ "xiyaowong/transparent.nvim", opts = function() require("plugins.config.transparent") end },
-  { "scottmckendry/cyberdream.nvim", lazy = false, priority = 1000 },
+	{ "scottmckendry/cyberdream.nvim", lazy = false, priority = 1000 },
 }
 --[[return {
   -- Essential Plugins

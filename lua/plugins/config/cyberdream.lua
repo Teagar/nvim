@@ -1,43 +1,38 @@
-require("cyberdream").setup(
-	{
-		variant = "light", -- dark|light|auto
-		transparent = false,
+M.core = {}
+return {
+	variant = "dark", -- dark|light|auto
 
-		saturation = 1,
-		italic_comments = false,
-		hide_fillchars = false,     -- Replace all fillchars with ' ' for the ultimate clean look
-		borderless_pickers = false,
-		terminal_colors = true,
-		cache = false,
+	saturation = 1,
+	italic_comments = true,
+	hide_fillchars = false,     -- Replace all fillchars with ' ' for the ultimate clean look
+	borderless_pickers = false,
+	terminal_colors = true,
+	cache = false,
 
-		highlights = {
-				Comment = { fg = "#696969", bg = "NONE", italic = true },
-		},
+	highlights = {
+			Constant = { fg = "#969696", italic = true },
+			Comment = { fg = "#969696", italic = true },
+			String = { fg = "#69ff69" },
+			Identifier = { fg = "#eeeeee" },
+			Delimiter = { fg = "#ff9600" },
+			["@punctuation.delimiter"] = { fg = "#eeeeee" },
+	},
 
-		overrides = function(colors)
-				return {
-						Comment = { fg = colors.green, bg = "NONE", italic = true },
-						["@property"] = { fg = colors.magenta, bold = true },
-				}
-		end,
-
-		colors = {
-				bg = "#000000",
-				green = "#00ff00",
-				dark = {
-						magenta = "#ff00ff",
-						fg = "#eeeeee",
-				},
-				light = {
-						red = "#ff5c57",
-						cyan = "#5ef1ff",
-				},
-		},
-		extensions = {
-				telescope = true,
-				notify = true,
-				mini = true,
-				...
-		},
-	}
-)
+	colors = {
+			bg = "#000000",
+			green = "#00ff00",
+			dark = {
+					magenta = "#ff00ff",
+					fg = "#eeeeee",
+			},
+			light = {
+					red = "#ff5c57",
+					cyan = "#5ef1ff",
+			},
+	},
+	extensions = {
+			telescope = true,
+			notify = true,
+			mini = true,
+	},
+}

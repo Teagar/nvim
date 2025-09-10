@@ -1,5 +1,5 @@
 M.config.highlights = {
-  transparency = g.transparent_enabled,
+	transparency = g.transparent_enabled or false,
 	theme = "cyberdream",
 
   highlight_groups = {
@@ -12,6 +12,19 @@ M.config.highlights = {
     RainbowCyan = "#56B6C2",
   },
 
+	-- Verify if theme has a config and exists
+	colorscheme = function(self)
+		local theme = self.theme
+		local theme_config_exists, opts = pcall(require, "plugins.config." .. theme)
+		local theme_exists, theme_mod = pcall(require, theme)
+
+		if theme_exists and type(theme_mod.setup) == "function" then
+			theme_mod.setup(theme_config_exists and opts or {})
+		end
+
+		pcall(vim.cmd.colorscheme, theme)
+
+	end,
 
   diagnostic = function ()
     vim.diagnostic.config({
@@ -27,11 +40,5 @@ M.config.highlights = {
   end
 }
 
-local transparency = M.config.highlights.transparency
-local theme = M.config.highlights.theme
-
-if transparency then
-  vim.cmd("colorscheme " .. theme)
-end
-
 M.config.highlights.diagnostic()
+M.config.highlights:colorscheme()

@@ -40,7 +40,7 @@ M.config.mappings = {
   end,
 
 	notify = function ()
-		keymap.set('n', '<leader>d', '<cmd>NoiceDismiss<CR>', { desc = "Dismiss Noice Message" })
+		keymap.set('n', '<leader>n', '<cmd>NoiceDismiss<CR>', { desc = "Dismiss Noice Message" })
 	end,
 
 	gitsigns = function ()

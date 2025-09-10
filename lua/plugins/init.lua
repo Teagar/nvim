@@ -1,4 +1,12 @@
 return {
+  -- Tree-sitter
+	{ "nvim-treesitter/nvim-treesitter",
+		branch = 'master',
+		lazy = false,
+		build = ":TSUpdate"
+	}
+}
+--[[return {
   -- Essential Plugins
   { "m4xshen/autoclose.nvim" },
   { "williamboman/mason.nvim" },
@@ -36,12 +44,6 @@ return {
   -- Language Server Support
   { "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" },
 
-  -- Tree-sitter
-  { "nvim-treesitter/nvim-treesitter",
-    build = function()
-      require("nvim-treesitter.install").update({ with_sync = true })()
-    end,
-  },
 
   -- Keybindings and Utils
   { "folke/which-key.nvim", event = "VeryLazy",
@@ -59,3 +61,5 @@ return {
   -- Themes
   { "scottmckendry/cyberdream.nvim", lazy = false, priority = 1000 },
 }
+
+  ]]--

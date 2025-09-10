@@ -1,7 +1,7 @@
 M = {}
 M.core = {}
 M.config = {}
-M.plugin = {}
+M.plugins = {}
 
 require("core.globals")
 require("core.requires")

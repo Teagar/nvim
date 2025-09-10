@@ -65,7 +65,7 @@ local branch = {
 
 local location = {
   "location",
-  padding = 0,
+  padding = 1,
 }
 
 local time = function()
@@ -168,8 +168,8 @@ local lsp_info = {
 lualine.setup {
   options = {
     icons_enabled = true,
-    theme = "horizon",
-    component_separators = { left = icons.ui.DividerRight, right = icons.ui.DividerLeft },
+    theme = "auto",
+    component_separators = { left = icons.ui.DividerRight, right = icons.ui.LineMiddle },
     section_separators = { left = icons.ui.BoldDividerRight, right = icons.ui.BoldDividerLeft },
     disabled_filetypes = {
       "TelescopePrompt",
@@ -187,12 +187,12 @@ lualine.setup {
     always_divide_middle = true,
   },
   sections = {
-    lualine_a = { branch },
-    lualine_b = { mode },
+    lualine_a = { mode },
+    lualine_b = {},
     lualine_c = { file_name, diagnostics, lsp_info },
     lualine_x = { diff, spaces, "encoding", filetype },
     lualine_y = { location, 'progress' },
-    lualine_z = { time },
+    lualine_z = { branch },
   },
   inactive_sections = {
     lualine_a = {},
@@ -201,14 +201,6 @@ lualine.setup {
     lualine_x = { "location" },
     lualine_y = {},
     lualine_z = {},
-  },
-  tabline = {
-    lualine_a = {'tabs'},
-    lualine_b = {'buffers'},
-    lualine_c = {},
-    lualine_x = {},
-    lualine_y = {},
-    lualine_z = {}
   },
   extensions = {},
 }

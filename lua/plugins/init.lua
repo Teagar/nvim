@@ -8,7 +8,12 @@ return {
 	-- UI
 	{ "xiyaowong/transparent.nvim", opts = function() require("plugins.config.transparent") end },
 	{ "scottmckendry/cyberdream.nvim", lazy = false, priority = 1000 },
+
+	-- LSP and Completion
+	{ "saghen/blink.cmp", version="1.*", opts = require("plugins.config.blink-cmp") },
+	{ "saghen/blink.indent", opts = require("plugins.config.blink-indent") }
 }
+
 --[[return {
   -- Essential Plugins
   { "m4xshen/autoclose.nvim" },
@@ -16,10 +21,6 @@ return {
   { "neovim/nvim-lspconfig" },
 
   -- LSP and Completion
-  { "hrsh7th/nvim-cmp" },
-  { "hrsh7th/cmp-nvim-lsp" },
-  { "hrsh7th/cmp-path" },
-  { "hrsh7th/cmp-cmdline" },
   { "saadparwaiz1/cmp_luasnip" },
   { "L3MON4D3/LuaSnip" },
   { "rafamadriz/friendly-snippets" },

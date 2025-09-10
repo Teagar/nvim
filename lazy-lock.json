@@ -1,4 +1,6 @@
 {
+  "blink.cmp": { "branch": "main", "commit": "bae4bae0eedd1fa55f34b685862e94a222d5c6f8" },
+  "blink.indent": { "branch": "main", "commit": "fcc03b8ae171e363b3853d1002cd156270f6e5ac" },
   "cyberdream.nvim": { "branch": "main", "commit": "caf4f5e57f8d5e0bb75fe98f4f67965b1fb3326c" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
   "mason.nvim": { "branch": "main", "commit": "7dc4facca9702f95353d5a1f87daf23d78e31c2a" },

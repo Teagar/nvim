@@ -1,4 +1,7 @@
-M.core = {}
+local orange = "#ff9600"
+local gray = "#969696"
+local green = "#69ff69"
+local white = "#eeeeee"
 return {
 	variant = "dark", -- dark|light|auto
 
@@ -10,12 +13,12 @@ return {
 	cache = false,
 
 	highlights = {
-			Constant = { fg = "#969696", italic = true },
-			Comment = { fg = "#969696", italic = true },
-			String = { fg = "#69ff69" },
-			Identifier = { fg = "#eeeeee" },
-			Delimiter = { fg = "#ff9600" },
-			["@punctuation.delimiter"] = { fg = "#eeeeee" },
+			Comment = { fg = gray, italic = true },
+			String = { fg = green },
+			Identifier = { fg = white },
+			Delimiter = { fg = orange },
+			CursorLineNr = { fg = orange },
+			["@punctuation.delimiter"] = { fg = white },
 	},
 
 	colors = {
@@ -23,7 +26,7 @@ return {
 			green = "#00ff00",
 			dark = {
 					magenta = "#ff00ff",
-					fg = "#eeeeee",
+					fg = white,
 			},
 			light = {
 					red = "#ff5c57",

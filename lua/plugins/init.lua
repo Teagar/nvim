@@ -10,6 +10,7 @@ return {
 	{ "scottmckendry/cyberdream.nvim", lazy = false, priority = 1000 },
   { "folke/noice.nvim", event = "VeryLazy", opts = require("plugins.config.noice"), dependencies = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify" } },
   { "nvim-lualine/lualine.nvim", opts = function() require("plugins.config.lualine") end, dependencies = { "nvim-tree/nvim-web-devicons" } },
+  { "nvim-tree/nvim-tree.lua", opts = function () require("plugins.config.nvim-tree") end },
 
 	-- LSP and Completion
 	{ "saghen/blink.cmp", version="1.*", opts = require("plugins.config.blink-cmp") },
@@ -19,20 +20,10 @@ return {
 
 	-- GIT
   { "lewis6991/gitsigns.nvim", opts = function () require("plugins.config.gitsigns") end },
+	{ "NeogitOrg/neogit", dependencies = { "nvim-lua/plenary.nvim", "sindrets/diffview.nvim" } },
+
 	-- Telescope
 	{ 'nvim-telescope/telescope.nvim', branch = '0.1.x', dependencies = { 'nvim-lua/plenary.nvim' } },
-}
-
---[[return {
-
-  -- LSP and Completion
-  { "rafamadriz/friendly-snippets" },
-
-  -- File Navigation and Search
-  { "nvim-tree/nvim-tree.lua" },
-
-  -- UI and Enhancements
-  { "norcalli/nvim-colorizer.lua" },
 
   -- Keybindings and Utils
   { "folke/which-key.nvim", event = "VeryLazy",
@@ -46,6 +37,18 @@ return {
       },
     }
   },
+}
+
+--[[return {
+
+  -- LSP and Completion
+  { "rafamadriz/friendly-snippets" },
+
+  -- File Navigation and Search
+
+  -- UI and Enhancements
+  { "norcalli/nvim-colorizer.lua" },
+
 
 
   ]]--

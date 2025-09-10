@@ -2,6 +2,7 @@ M.config.settings = function ()
 	g.mapleader = ' '
   g.maplocalleader = "\\"
   g.netrw_banner = 0            -- Remove netrw banner for cleaner looking
+	opt.winborder = "rounded"
   opt.wrap = false              -- Break the line, if true, just in view mode
   opt.scrolloff = 8             -- Minimal number of screen lines to keep above and below the cursor
   opt.guicursor = ""            -- Desactivate the changes of the cursor

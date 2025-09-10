@@ -1,5 +1,6 @@
 M.config.highlights = {
-  transparency = true,
+  transparency = g.transparent_enabled,
+	theme = "cyberdream",
 
   highlight_groups = {
     RainbowRed = "#E06C75",
@@ -15,21 +16,22 @@ M.config.highlights = {
   diagnostic = function ()
     vim.diagnostic.config({
       signs = {
-	text = {
-	  [vim.diagnostic.severity.ERROR] = icons.diagnostics.Error,
-	  [vim.diagnostic.severity.WARN]  = icons.diagnostics.Warning,
-	  [vim.diagnostic.severity.HINT]  = icons.diagnostics.Hint,
-	  [vim.diagnostic.severity.INFO]  = icons.diagnostics.Information,
-	},
+				text = {
+					[vim.diagnostic.severity.ERROR] = icons.diagnostics.Error,
+					[vim.diagnostic.severity.WARN]  = icons.diagnostics.Warning,
+					[vim.diagnostic.severity.HINT]  = icons.diagnostics.Hint,
+					[vim.diagnostic.severity.INFO]  = icons.diagnostics.Information,
+				},
       },
     })
   end
 }
 
-if M.config.highlights.transparency then
-  vim.cmd("colorscheme retrobox")
-  hl(0, "Normal", { bg = "NONE", ctermbg = "NONE" })
-  --vim.hl(0, "Normal", { bg = "NONE", ctermbg = "NONE" })
+local transparency = M.config.highlights.transparency
+local theme = M.config.highlights.theme
+
+if transparency then
+  vim.cmd("colorscheme " .. theme)
 end
 
 M.config.highlights.diagnostic()

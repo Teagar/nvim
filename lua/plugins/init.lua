@@ -1,15 +1,17 @@
 return {
+	-- Essential Plugins
+  { "williamboman/mason.nvim", opts = function() require("plugins.config.mason") end },
+
   -- Tree-sitter
-	{ "nvim-treesitter/nvim-treesitter",
-		branch = 'master',
-		lazy = false,
-		build = ":TSUpdate"
-	}
+	{ "nvim-treesitter/nvim-treesitter", branch = 'master', lazy = false, build = ":TSUpdate" },
+
+	-- UI
+	{ "xiyaowong/transparent.nvim", opts = function() require("plugins.config.transparent") end },
+  { "scottmckendry/cyberdream.nvim", lazy = false, priority = 1000 },
 }
 --[[return {
   -- Essential Plugins
   { "m4xshen/autoclose.nvim" },
-  { "williamboman/mason.nvim" },
   { "williamboman/mason-lspconfig.nvim" },
   { "neovim/nvim-lspconfig" },
 
@@ -39,7 +41,6 @@ return {
   { "folke/noice.nvim", dependencies = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify" } },
   { "norcalli/nvim-colorizer.lua" },
   { "lewis6991/gitsigns.nvim" },
-  { "scottmckendry/cyberdream.nvim", lazy = false, priority = 1000 },
 
   -- Language Server Support
   { "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" },

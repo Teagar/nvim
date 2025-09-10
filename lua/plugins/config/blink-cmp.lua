@@ -1,4 +1,11 @@
 return {
+	cmdline = {
+		keymap = { preset = 'inherit' },
+		completion = {
+			menu = { auto_show = false },
+			ghost_text = { enabled = true }
+		},
+	},
 	keymap = { preset = 'default' },
 	completion = {
 		documentation = { auto_show = true, auto_show_delay_ms = 500 },

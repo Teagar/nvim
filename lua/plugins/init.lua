@@ -8,6 +8,7 @@ return {
 	-- UI
 	{ "xiyaowong/transparent.nvim", opts = function() require("plugins.config.transparent") end },
 	{ "scottmckendry/cyberdream.nvim", lazy = false, priority = 1000 },
+  { "folke/noice.nvim", event = "VeryLazy", opts = require("plugins.config.noice") ,dependencies = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify" } },
 
 	-- LSP and Completion
 	{ "saghen/blink.cmp", version="1.*", opts = require("plugins.config.blink-cmp") },
@@ -16,6 +17,8 @@ return {
 
 	-- GIT
   { "lewis6991/gitsigns.nvim", opts = function () require("plugins.config.gitsigns") end },
+	-- Telescope
+	{ 'nvim-telescope/telescope.nvim', branch = '0.1.x', dependencies = { 'nvim-lua/plenary.nvim' } },
 }
 
 --[[return {
@@ -33,7 +36,6 @@ return {
   -- UI and Enhancements
   { "kevinhwang91/nvim-ufo", dependencies = { "kevinhwang91/promise-async" } },
   { "nvim-lualine/lualine.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
-  { "folke/noice.nvim", dependencies = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify" } },
   { "norcalli/nvim-colorizer.lua" },
 
   -- Language Server Support

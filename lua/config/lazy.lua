@@ -21,6 +21,6 @@ require("lazy").setup({
     { import = "plugins" },
   },
   -- Configure any other settings here. See the documentation for more details.
-  install = { colorscheme = { "retrobox" } },
+  install = { colorscheme = { "cyberdream" } },
   checker = { enabled = true },
 })

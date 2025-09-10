@@ -6,7 +6,7 @@ require("transparent").setup(
 			"Folded",
 			"FloatBorder",
 			"WinSeparator",
-			-- "NvimTreeNormal" -- NvimTree
+			--"NvimTreeNormal" -- NvimTree
 		},
 	}
 )

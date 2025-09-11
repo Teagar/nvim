@@ -134,7 +134,6 @@ local lsp_info = {
   function()
     local msg = "LS Inactive"
     local buf_ft = vim.bo.filetype
-    local clients = vim.lsp.get_active_clients()
     -- start register
     local buf_clients = vim.lsp.get_clients()
     local buf_client_names = {}

@@ -1,6 +1,6 @@
 return {
   cmd = { "laravel-ls" },
-  -- filetypes = { "css", "scss", "less" },
-  root_markers = { "composer.json" },
+  filetypes = { "php", "blade.php" }, -- ajusta pro que você usa
+  root_markers = { "composer.json", ".git" },
   init_options = { provideFormatter = true },
 }

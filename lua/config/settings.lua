@@ -1,6 +1,6 @@
 M.config.settings = function ()
 	g.mapleader = ' '
-  g.maplocalleader = "\\"
+	g.maplocalleader = "\\"
   g.netrw_banner = 0            -- Remove netrw banner for cleaner looking
 	opt.winborder = "rounded"
   opt.wrap = false              -- Break the line, if true, just in view mode
@@ -14,7 +14,7 @@ M.config.settings = function ()
     foldclose = icons.ui.ChevronShortRight
   }
 
-  opt.list = true               -- Use special characters to represent things like tabs or trailing spaces
+  opt.list = false               -- Use special characters to represent things like tabs or trailing spaces
   opt.listchars = {
     tab = icons.ui.Blank .. icons.ui.Blank,
 		trail = icons.ui.Dot,

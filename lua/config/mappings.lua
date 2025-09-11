@@ -56,8 +56,7 @@ M.config.mappings = {
 		keymap.set('n', '<leader>tg', ':Telescope live_grep<CR>', { noremap = true, silent = true, desc = 'Live grep' })
 		keymap.set('n', '<leader>th', ':Telescope help_tags<CR>', { noremap = true, silent = true, desc = 'Help tags' })
 		keymap.set('n', '<leader>tp', ':Telescope projects<CR>', { noremap = true, silent = true, desc = 'Show all projects' })
-	end
-
+	end,
 }
 
 M.config.mappings.core()

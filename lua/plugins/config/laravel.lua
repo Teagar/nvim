@@ -1,5 +1,5 @@
 require("laravel").setup({
-    notifications = true, -- Enable/disable Laravel.nvim notifications (default: true)
+    notifications = false, -- Enable/disable Laravel.nvim notifications (default: true)
     debug = false,        -- Enable/disable debug error notifications (default: false)
     keymaps = true,       -- Enable/disable Laravel.nvim keymaps (default: true)
     sail = {

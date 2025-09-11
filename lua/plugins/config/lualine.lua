@@ -167,7 +167,7 @@ local lsp_info = {
 lualine.setup {
   options = {
     icons_enabled = true,
-    theme = "cyberdream",
+    theme = "iceberg",
     component_separators = { left = icons.ui.DividerRight, right = icons.ui.LineMiddle },
     section_separators = { left = icons.ui.BoldDividerRight, right = icons.ui.BoldDividerLeft },
     disabled_filetypes = {

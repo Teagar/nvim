@@ -1,6 +1,6 @@
 return {
 	-- Essential Plugins
-  { "williamboman/mason.nvim", opts = function() require("plugins.config.mason") end },
+	{ "williamboman/mason.nvim", opts = function() require("plugins.config.mason") end },
 
   -- Tree-sitter
 	{ "nvim-treesitter/nvim-treesitter", branch = 'master', lazy = false, build = ":TSUpdate" },
@@ -15,8 +15,9 @@ return {
 	-- LSP and Completion
 	{ "saghen/blink.cmp", version="1.*", opts = require("plugins.config.blink-cmp") },
 	{ "saghen/blink.indent", opts = require("plugins.config.blink-indent") },
+	{ 'windwp/nvim-autopairs', event = "InsertEnter", config = true },
   { "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" },
-	--{ "danymat/neogen", config = true, version = "*" }
+	{ "danymat/neogen", config = true, version = "*" },
 
 	-- GIT
   { "lewis6991/gitsigns.nvim", opts = function () require("plugins.config.gitsigns") end },
@@ -26,14 +27,11 @@ return {
 	{ 'nvim-telescope/telescope.nvim', branch = '0.1.x', dependencies = { 'nvim-lua/plenary.nvim' } },
 
   -- Keybindings and Utils
-  { "folke/which-key.nvim", event = "VeryLazy",
-    keys = {
-      {
-        "<leader>?", function() require("which-key").show({ global = false }) end,
-        desc = "Buffer Local Keymaps (which-key)",
-      },
-    }
-  },
+  { "folke/which-key.nvim", event = "VeryLazy", keys = { { "<leader>?", function() require("which-key").show({ global = false }) end, desc = "Buffer Local Keymaps (which-key)", } } },
+
+	-- Laravel
+	
+	
 }
 
 --[[return {

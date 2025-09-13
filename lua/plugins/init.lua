@@ -31,6 +31,8 @@ return {
 
 	-- Laravel
 	{ "adibhanna/laravel.nvim", requires = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim", }, config = function () require("plugins.config.laravel") end},
+
+  { "norcalli/nvim-colorizer.lua" },
 }
 
 --[[return {
@@ -41,8 +43,5 @@ return {
   -- File Navigation and Search
 
   -- UI and Enhancements
-  { "norcalli/nvim-colorizer.lua" },
-
-
 
   ]]--

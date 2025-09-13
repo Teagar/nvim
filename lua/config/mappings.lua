@@ -57,6 +57,10 @@ M.config.mappings = {
 		keymap.set('n', '<leader>th', ':Telescope help_tags<CR>', { noremap = true, silent = true, desc = 'Help tags' })
 		keymap.set('n', '<leader>tp', ':Telescope projects<CR>', { noremap = true, silent = true, desc = 'Show all projects' })
 	end,
+
+	colorizer = function ()
+		keymap.set('n', '<leader>c', ':ColorizerToggle<CR>', { noremap = true, silent = true, desc = 'Toggle Colorizer'})
+	end,
 }
 
 M.config.mappings.core()
@@ -65,3 +69,4 @@ M.config.mappings.diagnostic()
 M.config.mappings.notify()
 M.config.mappings.gitsigns()
 M.config.mappings.telescope()
+M.config.mappings.colorizer()

@@ -1,10 +1,7 @@
 return {
 	blocked = {
-		buftypes = {},
-		filetypes = {
-			"NvimTree",
-			"txt"
-		},
+		buftypes = { "nofile" },	-- Disable indent in nofile buffers
+		filetypes = { "help" },
 	},
 	static = {
 		enabled = true,
@@ -13,8 +10,8 @@ return {
 		highlights = { 'BlinkIndent' },
 	},
 	scope = {
-		enabled = false,
-		char = icons.ui.LineLeft,
+		enabled = true,
+		char = icons.ui.BoldLineLeft,
 		priority = 1024,
 		highlights = {
 			'BlinkIndentOrange',

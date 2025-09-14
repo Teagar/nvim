@@ -33,6 +33,10 @@ M.config.functions = {
     })
   end,
 
+	debug_mode = function ()
+		require("config.debug")
+	end
+
 }
 
 M.config.functions.relative_number()

@@ -1,7 +1,10 @@
 return {
 	blocked = {
 		buftypes = {},
-		filetypes = {"txt"},
+		filetypes = {
+			"NvimTree",
+			"txt"
+		},
 	},
 	static = {
 		enabled = true,

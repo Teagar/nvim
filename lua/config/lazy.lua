@@ -23,4 +23,5 @@ require("lazy").setup({
   -- Configure any other settings here. See the documentation for more details.
   install = { colorscheme = { "cyberdream" } },
   checker = { enabled = true },
+  ui = { border = "rounded" }
 })

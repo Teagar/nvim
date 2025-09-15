@@ -17,7 +17,7 @@ M.config.settings = function ()
   opt.list = false               -- Use special characters to represent things like tabs or trailing spaces
   opt.listchars = {
     tab = icons.ui.Blank .. icons.ui.Blank,
-		trail = icons.ui.Dot,
+  	trail = icons.ui.Dot,
     extends = icons.ui.DoubleChevronRight,
     precedes = icons.ui.DoubleChevronLeft,
   }
@@ -35,6 +35,7 @@ M.config.settings = function ()
 
   opt.tabstop = 2               -- Fix the tab char
   opt.shiftwidth = 2            -- Number of spaces in a tab
+  opt.expandtab = true          -- Use spaces instead of tabs
   opt.smartindent = true        -- Do smart autoindenting when starting a new line
 
   opt.splitbelow = true

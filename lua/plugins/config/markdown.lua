@@ -17,7 +17,7 @@ return {
     },
     heading = {
         enabled = true,
-        sign = true,
+        sign = false,
         icons = {
           icons.numeric.One .. " ",
           icons.numeric.Two .. " ",

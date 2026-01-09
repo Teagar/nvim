@@ -32,16 +32,22 @@ return {
   { "norcalli/nvim-colorizer.lua" },
   { "lewis6991/gitsigns.nvim" },
   { "scottmckendry/cyberdream.nvim", lazy = false, priority = 1000 },
+  { "vyfor/cord.nvim", build = ":Cord update" },
 
   -- Language Server Support
   { "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" },
 
   -- Tree-sitter
-  { "nvim-treesitter/nvim-treesitter",
-    build = function()
-      require("nvim-treesitter.install").update({ with_sync = true })()
-    end,
+  {
+    'nvim-treesitter/nvim-treesitter',
+    lazy = false,
+    build = ':TSUpdate'
   },
+  -- { "nvim-treesitter/nvim-treesitter",
+  --   build = function()
+  --     require("nvim-treesitter.install").update({ with_sync = true })()
+  --   end,
+  -- },
 
   -- Keybindings and Utils
   { "folke/which-key.nvim", event = "VeryLazy",

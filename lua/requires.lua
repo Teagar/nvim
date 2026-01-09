@@ -20,6 +20,7 @@ M.utils.setup_plugins = function()
     require("gitsigns").setup(require("plugins.config.gitsigns"))
     require("plugins.config.neogen")
     require("plugins.config.trouble")
+    require("cord").setup(require("plugins.config.cord"))
 end
 
 M.utils.setup_ui = function()

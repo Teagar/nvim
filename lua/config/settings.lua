@@ -28,7 +28,7 @@ M.options = function ()
   opt.splitright = true
 
   opt.backup = false
-  opt.clipboard = 'unnamedplus'
+  opt.clipboard = 'unnamedplus' -- requires xclip
   opt.writebackup = false
 
   -- optionally enable 24-bit colour

@@ -61,6 +61,10 @@ M.config.mappings = {
 	colorizer = function ()
 		keymap.set('n', '<leader>c', ':ColorizerToggle<CR>', { noremap = true, silent = true, desc = 'Toggle Colorizer'})
 	end,
+
+  transparency = function ()
+    keymap.set('n', '<leader>T', ':TransparentToggle<CR>', { noremap = true, silent = true, desc = 'Toggle Transparency'})
+  end,
 }
 
 M.config.mappings.core()
@@ -70,3 +74,4 @@ M.config.mappings.notify()
 M.config.mappings.gitsigns()
 M.config.mappings.telescope()
 M.config.mappings.colorizer()
+M.config.mappings.transparency()

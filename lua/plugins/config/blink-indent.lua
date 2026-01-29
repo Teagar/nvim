@@ -1,7 +1,7 @@
 return {
 	blocked = {
-		buftypes = { "nofile" },	-- Disable indent in nofile buffers
-		filetypes = { "help" },
+		-- buftypes = { "nofile" },	-- Disable indent in nofile buffers
+		-- filetypes = { "help" },
 	},
 	static = {
 		enabled = true,

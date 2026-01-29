@@ -1,4 +1,5 @@
---[[============================================================================
+--[[
+============================================================================
 Buffer Debugger for Neovim
 Prints information about the current buffer whenever it changes:
 	- Buffer number
@@ -8,7 +9,8 @@ Prints information about the current buffer whenever it changes:
 	- Buffer name
 Automatically ignores buffers with filetype "notify" and avoids repeated prints.
 Supports both normal buffers and floating windows (Telescope, Mason, WhichKey, etc.)
-============================================================================]]--
+============================================================================
+]]--
 
 -- Global state to track last printed buffer info to prevent duplicates
 _G._last_buf_info = { buf = nil, ft = nil, bt = nil }

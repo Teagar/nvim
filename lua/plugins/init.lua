@@ -14,10 +14,10 @@ return {
   { 'MeanderingProgrammer/render-markdown.nvim', dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-mini/mini.nvim' }, opts = require("plugins.config.markdown") },
 
 	-- LSP and Completion
-	{ "saghen/blink.cmp", build="cargo build --release", version="1.*", opts = require("plugins.config.blink-cmp") },
+	{ "saghen/blink.cmp", build = "cargo build --release", version="1.*", opts = require("plugins.config.blink-cmp") },
 	{ "saghen/blink.indent", opts = require("plugins.config.blink-indent") },
 	{ 'windwp/nvim-autopairs', event = "InsertEnter", config = true },
-  { "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" },
+  { "nvimtools/none-ls.nvim", requires = "nvim-lua/plenary.nvim" },
 	{ "danymat/neogen", config = true, version = "*" },
 
 	-- GIT

@@ -5,6 +5,7 @@ M.core.requires = function()
     require("config.functions")
     require("config.highlights")
     require("config.lsp")
+    -- require("config.debug") -- DebugMode
 end
 
 M.core.requires()

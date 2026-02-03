@@ -8,5 +8,8 @@ require("transparent").setup(
 			"WinSeparator",
 			--"NvimTreeNormal" -- NvimTree
 		},
+			--  exclude_groups = {
+			-- "CursorLine",
+			--  },
 	}
 )

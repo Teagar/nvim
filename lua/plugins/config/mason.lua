@@ -1,5 +1,10 @@
 require("mason").setup(
 	{
+    -- Roslyn registries for C#
+    registries = {
+        "github:mason-org/mason-registry",
+        "github:Crashdummyy/mason-registry",
+    },
 		ui = {
 			border = nil,
 			icons = {

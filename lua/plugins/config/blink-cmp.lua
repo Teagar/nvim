@@ -6,7 +6,9 @@ return {
 			ghost_text = { enabled = true }
 		},
 	},
+
 	keymap = { preset = 'default' },
+
 	completion = {
 		documentation = { auto_show = true, auto_show_delay_ms = 500 },
 		keyword = { range = 'full' },	-- prefix|full
@@ -22,6 +24,7 @@ return {
 			}
 		},
 	},
+
 	sources = {
 		default = { 'lsp', 'path', 'snippets', 'buffer' },
 	},

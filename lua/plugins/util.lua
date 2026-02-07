@@ -10,5 +10,7 @@ return {
         desc = "Buffer Local Keymaps (which-key)"
       }
     }
-  }
+  },
+
+ { "vyfor/cord.nvim", opts = require("plugins.config.cord") }
 }

@@ -43,7 +43,7 @@ M.config.settings = function ()
 
   opt.clipboard = "unnamedplus" -- Use the clipboard register "+" (quoteplus) 
 
-  opt.title = true
+  opt.title = false
 
   wo.number = true              -- Set numbers line
 

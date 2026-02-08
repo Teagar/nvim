@@ -6,8 +6,13 @@ return {
       "nvim-treesitter/nvim-treesitter",
     },
     opts = require("plugins.config.codecompanion"),
-    enabled = false
   },
-	{ "github/copilot.vim" }
+	{
+    "github/copilot.vim",
+    init = function()
+      g.copilot_enable = false
+      g.copilot_no_tab_map = true
+    end,
+  }
 }
 

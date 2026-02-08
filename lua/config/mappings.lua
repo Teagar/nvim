@@ -65,6 +65,17 @@ M.config.mappings = {
   transparency = function ()
     keymap.set('n', '<leader>T', ':TransparentToggle<CR>', { noremap = true, silent = true, desc = 'Toggle Transparency'})
   end,
+
+  copilot = function ()
+    keymap.set('n', '<leader>a', '', { noremap = true, silent = true, desc = 'Copilot'})
+    keymap.set('n', '<leader>ae', ':Copilot enable<CR>', { noremap = true, silent = true, desc = 'Enable Copilot Inline'})
+    keymap.set('n', '<leader>ad', ':Copilot disable<CR>', { noremap = true, silent = true, desc = 'Disable Copilot Inline'})
+
+    keymap.set('i', '<C-y>', 'copilot#Accept("\\<CR>")', {
+      expr = true,
+      replace_keycodes = false
+    })
+  end
 }
 
 M.config.mappings.core()
@@ -75,3 +86,4 @@ M.config.mappings.gitsigns()
 M.config.mappings.telescope()
 M.config.mappings.colorizer()
 M.config.mappings.transparency()
+M.config.mappings.copilot()

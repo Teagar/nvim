@@ -72,7 +72,7 @@ M.config.mappings = {
     keymap.set('n', '<leader>ad', ':Copilot disable<CR>', { noremap = true, silent = true, desc = 'Disable Copilot inline'})
 
     keymap.set('n', '<leader>as', function()
-        print('Copilot inline enabled: ' .. tostring(g.copilot_enable))
+        print('Copilot inline enabled: ' .. tostring(g.copilot_enabled))
     end, { noremap = true, silent = true, desc = 'Copilot inline status' })
 
     keymap.set('i', '<C-y>', 'copilot#Accept("\\<CR>")', {

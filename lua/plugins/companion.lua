@@ -10,9 +10,8 @@ return {
 	{
     "github/copilot.vim",
     init = function()
-      g.copilot_enable = false
+      g.copilot_enabled = false
       g.copilot_no_tab_map = true
     end,
   }
 }
-

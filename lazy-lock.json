@@ -1,9 +1,9 @@
 {
   "blink.cmp": { "branch": "main", "commit": "4b18c32adef2898f95cdef6192cbd5796c1a332d" },
   "blink.indent": { "branch": "main", "commit": "9c80820ca77218a8d28e70075d6f44a1609911fe" },
-  "codecompanion.nvim": { "branch": "main", "commit": "dfb0ca928c439b65b1ac33758d90a9bc49c72138" },
+  "codecompanion.nvim": { "branch": "main", "commit": "bb571be895f715c6e3ce3c42cdb2059408725246" },
   "copilot.vim": { "branch": "release", "commit": "a12fd5672110c8aa7e3c8419e28c96943ca179be" },
-  "cord.nvim": { "branch": "master", "commit": "23e40044ff1a8267a8c318eb2ba4c4e7239e2a24" },
+  "cord.nvim": { "branch": "master", "commit": "6a0c0387abd4a4d1e65d6e83a274452a91f9ccd2" },
   "cyberdream.nvim": { "branch": "main", "commit": "a68ffa6af98bf1fc88f33a071c51a188ec85c725" },
   "diffview.nvim": { "branch": "main", "commit": "4516612fe98ff56ae0415a259ff6361a89419b0a" },
   "gitsigns.nvim": { "branch": "main", "commit": "1ce96a464fdbc24208e24c117e2021794259005d" },

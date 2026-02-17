@@ -3,7 +3,7 @@ M.config.lsp = {
   front_end = function()
     lsp.enable("html-ls")
     lsp.enable("css-ls")
-    lsp.enable("typescript-language-server")
+    lsp.enable("typescript-ls")
   end,
 
   back_end = function()

@@ -6,6 +6,7 @@ return {
     preset = 'none',      -- obsidian | lazy | none
     log_level = 'error',
     log_runtime = false,
+    latex = { enabled = false },
     file_types = { 'markdown' },
     ignore = function()
         return false
@@ -185,7 +186,7 @@ return {
         alignment_indicator = '━',
         head = 'RenderMarkdownTableHead',
         row = 'RenderMarkdownTableRow',
-        filler = 'RenderMarkdownTableFill',
+        -- filler = 'RenderMarkdownTableFill',
         style = 'full', -- none | normal | full
     },
     callout = {

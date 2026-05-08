@@ -1,1 +1,1 @@
-return { { "williamboman/mason.nvim", opts = function() require("plugins.config.mason") end } }
+return { { "mason-org/mason.nvim", opts = function() require("plugins.config.mason") end } }

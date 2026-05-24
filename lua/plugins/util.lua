@@ -12,5 +12,7 @@ return {
     }
   },
 
- { "vyfor/cord.nvim", opts = require("plugins.config.cord") }
+ { "vyfor/cord.nvim", opts = require("plugins.config.cord") },
+ { "ThePrimeagen/vim-be-good" }
+
 }

@@ -1,5 +1,5 @@
 M.config.settings = function ()
-	g.mapleader = ' '
+	g.mapleader = " "
 	g.maplocalleader = "\\"
   g.netrw_banner = 0            -- Remove netrw banner for cleaner looking
 	opt.winborder = "rounded"

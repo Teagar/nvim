@@ -1,4 +1,4 @@
-M.core.icons = require("./core/icons")
+M.core.icons = require("core/icons")
 
 M.core.globals = function()
   vim = vim

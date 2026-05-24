@@ -31,6 +31,7 @@ M.config.settings = function ()
   opt.foldlevel = 99            -- Start editing with all folds opened
   opt.foldlevelstart = 99
   opt.foldmethod = "expr"       -- Use tree-sitter for folding method
+  opt.foldexpr   = "v:lua.vim.treesitter.foldexpr()"
   opt.updatetime = 100          -- Update time in ms(miliseconds)
 
   opt.tabstop = 2               -- Fix the tab char
@@ -49,7 +50,7 @@ M.config.settings = function ()
 
   g.loaded_perl_provider = 0    -- Disable perl
   g.loaded_ruby_provider = 0    -- Disable ruby
-  g.loaded_node_provider = 0    -- Disable node
+  -- g.loaded_node_provider = 0    -- Disable node
   g.loaded_python3_provider = 0    -- Disable python3
 
   vim.loader.enable()           -- Adds the Lua loader using the byte-compilation cache 

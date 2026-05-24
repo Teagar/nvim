@@ -5,7 +5,8 @@ return {
     "blade",
     "javascriptreact",
     "typescriptreact",
-    "svelte"
+    "svelte",
+    "razor"
   },
   root_markers = { "index.html", ".git" },
   init_options = { provideFormatter = true },

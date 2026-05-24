@@ -122,9 +122,13 @@ local alternative_methods = {
 
 local linter_list_registered = function(filetype)
   local registered_providers = list_registered_providers_names(filetype)
-  local providers_for_methods = vim.tbl_flatten(vim.tbl_map(function(m)
+
+  local providers_for_methods = vim.iter(vim.tbl_map(function(m)
     return registered_providers[m] or {}
-  end, alternative_methods))
+  end, alternative_methods)):flatten():totable()
+  -- local providers_for_methods = vim.tbl_flatten(vim.tbl_map(function(m)
+  --   return registered_providers[m] or {}
+  -- end, alternative_methods))
 
   return providers_for_methods
 end

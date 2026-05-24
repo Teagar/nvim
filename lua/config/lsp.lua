@@ -12,7 +12,7 @@ M.config.lsp = {
   end,
 
   misc = function()
-    lsp.enable("markdown-ls")
+    -- lsp.enable("markdown-ls")
     lsp.enable("json-ls")
     lsp.enable("laravel-ls")
   end

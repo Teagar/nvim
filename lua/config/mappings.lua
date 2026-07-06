@@ -79,6 +79,10 @@ M.config.mappings = {
       expr = true,
       replace_keycodes = false
     })
+  end,
+
+  terminal = function ()
+    keymap.set('n', '<leader>k', "<Cmd> silent !kitty --class=floating-terminal<CR>", { noremap = true, silent = true, desc = "Open Kitty Terminal"})
   end
 }
 
@@ -91,3 +95,4 @@ M.config.mappings.telescope()
 M.config.mappings.colorizer()
 M.config.mappings.transparency()
 M.config.mappings.copilot()
+M.config.mappings.terminal()

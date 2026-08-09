@@ -113,25 +113,25 @@ local list_registered = function(filetype)
   return registered_providers[method] or {}
 end
 
---- for linter
-local alternative_methods = {
-  null_ls.methods.DIAGNOSTICS,
-  null_ls.methods.DIAGNOSTICS_ON_OPEN,
-  null_ls.methods.DIAGNOSTICS_ON_SAVE,
-}
+-- --- for linter
+-- local alternative_methods = {
+--   null_ls.methods.DIAGNOSTICS,
+--   null_ls.methods.DIAGNOSTICS_ON_OPEN,
+--   null_ls.methods.DIAGNOSTICS_ON_SAVE,
+-- }
 
-local linter_list_registered = function(filetype)
-  local registered_providers = list_registered_providers_names(filetype)
-
-  local providers_for_methods = vim.iter(vim.tbl_map(function(m)
-    return registered_providers[m] or {}
-  end, alternative_methods)):flatten():totable()
-  -- local providers_for_methods = vim.tbl_flatten(vim.tbl_map(function(m)
-  --   return registered_providers[m] or {}
-  -- end, alternative_methods))
-
-  return providers_for_methods
-end
+-- local linter_list_registered = function(filetype)
+--   local registered_providers = list_registered_providers_names(filetype)
+--
+--   local providers_for_methods = vim.iter(vim.tbl_map(function(m)
+--     return registered_providers[m] or {}
+--   end, alternative_methods)):flatten():totable()
+--   -- local providers_for_methods = vim.tbl_flatten(vim.tbl_map(function(m)
+--   --   return registered_providers[m] or {}
+--   -- end, alternative_methods))
+--
+--   return providers_for_methods
+-- end
 -- end for lsp
 
 local lsp_info = {

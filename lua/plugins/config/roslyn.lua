@@ -32,7 +32,7 @@ return {
     -- Whether or not to look for solution files in the child of the (root).
     -- Set this to true if you have some projects that are not a child of the
     -- directory with the solution file
-    broad_search = false,
+    broad_search = true,
 
     -- Whether or not to lock the solution target after the first attach.
     -- This will always attach to the target in `vim.g.roslyn_nvim_selected_solution`.

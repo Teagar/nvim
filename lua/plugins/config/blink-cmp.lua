@@ -30,7 +30,7 @@ return {
 		accept = { auto_brackets = { enabled = false }, },
 		list = { selection = { preselect = true, auto_insert = false } },
 		menu = {
-			auto_show = false,
+			auto_show = true,
 			draw = {
 				columns = {
 					{ "kind_icon", "label", "label_description", gap = 2 },

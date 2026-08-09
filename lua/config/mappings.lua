@@ -75,14 +75,11 @@ M.config.mappings = {
         print('Copilot inline enabled: ' .. tostring(g.copilot_enabled))
     end, { noremap = true, silent = true, desc = 'Copilot inline status' })
 
-    keymap.set('i', '<C-y>', 'copilot#Accept("\\<CR>")', {
-      expr = true,
-      replace_keycodes = false
-    })
+    keymap.set('i', '<C-y>', 'copilot#Accept("\\<CR>")', { expr = true, replace_keycodes = false })
   end,
 
   terminal = function ()
-    keymap.set('n', '<leader>k', "<Cmd> silent !kitty --class=floating-terminal<CR>", { noremap = true, silent = true, desc = "Open Kitty Terminal"})
+    keymap.set('n', '<leader><Enter>', "<Cmd> silent !kitty --class=floating-terminal &<CR>", { noremap = true, silent = true, desc = "Open Kitty Terminal"})
   end
 }
 

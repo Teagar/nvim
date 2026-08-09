@@ -5,10 +5,5 @@ return {
   { "nvimtools/none-ls.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
 	{ "danymat/neogen", config = true, version = "*" },
   { "MagicDuck/grug-far.nvim" }, -- see later
-  {
-    "seblyng/roslyn.nvim",
-    ---@module 'roslyn.config'
-    ---@type RoslynNvimConfig
-    opts = require("plugins.config.roslyn"),
-  }
+  { "seblyng/roslyn.nvim", ft = "cs", opts = require("plugins.config.roslyn") }
 }

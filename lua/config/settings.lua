@@ -1,4 +1,5 @@
 M.config.settings = function ()
+  opt.title = true
 	g.mapleader = " "
 	g.maplocalleader = "\\"
   g.netrw_banner = 0            -- Remove netrw banner for cleaner looking
